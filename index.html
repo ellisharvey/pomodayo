@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<header>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <!-- homepage div-->
+  <div id="homepage">
+    <!-- title -->
+    <h1 id="title">
+       Pomodayo!
+    </h1>
+
+    <!-- main text on the home page -->
+    <p id="slogan">
+       5@25
+    </p>
+    <p id="blurb"> 
+      You need a break in your day, or maybe 16 of them...5@25!  Let us help you change it up every 25 minutes with a 5 minute break to keep your mind and body refreshed and happy :)
+    </p>
+
+    <br>
+    <br>
+
+    <div id="logo">
+      <!-- contains the logo image-->
+      <img src="logo2.jpg" alt="logo.jpg" id="header-image">
+    </div>
+
+    <br>
+    <p id="blurb">
+      If you are a new user, click on the sign up button to create an account.
+      <br>
+       If you are a returning user, click on the log in button to log back into the page.
+    </p>
+
+      <div id="buttons">
+        <!-- code for the buttons to link to a sign-up/login page -->
+        <button type="button" class="button-style" onclick="changeDiv1()"> Log in</button>
+        <p id="slash"> | </p>
+        <button type="button" class="button-style" onclick="changeDiv2()"> Sign Up </button>
+      </div>
+    <br>
+    <br>
+  </div>
+ 
+  <!-- div to contain the login page -->
+  <div id="login_page">
+    <div class="login">
+      <h2 class="login"> Login </h2>
+      <br>
+      <br>
+      <form class="login">
+        <label for="username"> Username: </label>
+        <input type="text" id="username" name="username"><br>
+        <label for="password"> Password: </label>
+        <input type="text" id="password" name="password">
+      </form>
+      <br>
+      <br>
+      <br>
+      <!-- returns user to the main page -->
+      <button type="button" class="button-style" onclick="returnDivs()"> Back </button>
+    </div>
+  </div>  
+
+  <!-- div to contain the sign up page -->
+  <div id="signup-page">
+    <div class="signup">
+      <h2 class="signup"> Sign Up </h2>
+      <br>
+      <br>
+      <form class="signup">
+        <label for="username"> Username: </label>
+        <input type="text" id="username" name="username"><br>
+        <label for="password"> Password: </label>
+        <input type="text" id="password" name="password">
+      </form>
+      <br>
+      <br>
+      <br>
+      <!-- returns user to the main page -->
+      <button type="button" class="button-style" onclick="returnDivs()"> Back </button>
+    </div>
+  </div>    
+
+  <!-- div that contains the main page -->
+  <div id="main">
+    <h2> 
+      Timer
+    </h2>
+    <br>
+    <!-- div that contains the remaining time out of 25 minutes -->
+    <div>
+      <p id="timer"> 25:00
+      </p>
+    </div>
+    <br>
+    <!-- start, pause, and stop buttons -->
+    <div id="buttons">
+      <button type="button" id="start" class="button-style" onclick="startWithButton();"> Start </button>
+      <br>
+      <br>
+      <button type="button" id="stop" class="button-style" onclick="stopWithButton();"> Stop </button>
+      <br>
+    </div>
+
+  </div>
+
+
+
+
+  <!-- JS src tag-->
+  <script src="/script.js">
+	</script>
+</body>
+
+</html>
