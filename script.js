@@ -2,6 +2,7 @@
 var id1 = document.getElementById("homepage");
 var id2 = document.getElementById("login_page");
 var id3 = document.getElementById("signup-page");
+var id4 = document.getElementById("main");
 function changeDiv1()
 {
   id1.style.display = "none";
@@ -18,7 +19,13 @@ function returnDivs ()
   id2.style.display = "none";
   id3.style.display = "none";
 }
-
+function mainDiv ()
+{
+  id4.style.display = "block";
+  id1.style.display = "none";
+  id2.style.display = "none";
+  id3.style.display = "none";
+}
 /*makes the timer work */
 var handle = null;
 function startTimer(duration, display) {
@@ -48,12 +55,16 @@ function stopWithButton() {
   document.getElementById("stop").disabled = true;  
   clearInterval(handle);
 }
+function signin() {
+  console.log (document.getElementById('LoginUsername').value);
+  console.log ( document.getElementById('LoginPassword').value);
+  console.log (JSON.stringify({ "username": document.getElementById('LoginUsername').value, "password": document.getElementById('LoginPassword').value }));
   fetch('https://nphglvokre.execute-api.us-west-2.amazonaws.com/Prod/auth/sign-in', {
     method: 'post',
-    body: JSON.stringify(opts)
+    body: JSON.stringify({ "username": document.getElementById('LoginUsername').value, "password": document.getElementById('LoginPassword').value })
   }).then(function(response) {
     return response.json();
   }).then(function(data) {
-    ChromeSamples.log('Created Gist:', data.html_url);
+    console.log (data);
   });
 }

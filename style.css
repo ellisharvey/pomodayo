@@ -26,9 +26,39 @@ font-size: 15pt;
 p#slogan {
   font-size: 35pt;
 }
+#header-image {
+  box-shadow: 5px 5px 5px #FFA500;
+}
 .button-style {
   width: 100px;
   height: 40px;
+  border-color: #FFA500;
+  background-color: #FFD700;
+  color: white;
+  border-radius: 15px;
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+}
+.button-style:hover {
+  background-color: rgb(182, 156, 11);
+  border-color: rgb(201, 132, 3);
+  color: rgb(160, 160, 160); 
+}
+#submit-button {
+  width: 100px;
+  height: 40px;
+  border-color: #FFA500;
+  background-color: #FFD700;
+  color: white;
+  border-radius: 15px;
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+}
+#submit-button:hover {
+  background-color: rgb(182, 156, 11);
+  border-color: rgb(201, 132, 3);
+  color: rgb(160, 160, 160); 
+}
 }
 p#slash {
   display: inline;
